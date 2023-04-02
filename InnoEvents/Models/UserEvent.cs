@@ -7,16 +7,10 @@ namespace InnoEvents.Models
     public class UserEvent
     {        
         public int UserId { get; set; }
-
-        [ForeignKey("UserId")]
-        public virtual User User { get; set; }
-
+        public string UserName { get; set; }
         public int EventId { get; set; }
-
         [ForeignKey("EventId")]
         public virtual Event Event { get; set; }
-
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-
     }
 }

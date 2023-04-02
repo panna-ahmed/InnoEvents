@@ -7,10 +7,8 @@ namespace InnoEvents.Infrastructure
     {
         public InnoProfile()
         {
-            CreateMap<Event, DTOs.CreateEvent>().ReverseMap();
-
+            CreateMap<DTOs.CreateEvent, Event>();
             CreateMap<Event, DTOs.Event>().ReverseMap();
-            CreateMap<User, DTOs.User>().ReverseMap();
             CreateMap<UserEvent, DTOs.UserEvent>().ReverseMap();
         }
     }

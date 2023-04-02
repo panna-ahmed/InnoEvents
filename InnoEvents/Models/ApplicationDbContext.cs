@@ -2,14 +2,13 @@
 
 namespace InnoEvents.Models
 {
-    public class InnoContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public InnoContext(DbContextOptions<InnoContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
         public DbSet<Event> Events { get; set; }
-        public DbSet<User> Users { get; set; }
         public DbSet<UserEvent> UserEvents { get; set; }
 
     }
